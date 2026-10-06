@@ -271,7 +271,7 @@
 
           <div class="grid grid-cols-2 gap-3">
             <!-- Responsibility Toggle -->
-            <div class="space-y-1">
+            <div id="responsibility-wrapper" class="space-y-1">
               <label class="text-[11px] font-semibold text-slate-600">Responsibility</label>
               <div class="relative">
                 <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
@@ -300,7 +300,7 @@
           <div class="space-y-1">
             <label class="text-[11px] font-semibold text-slate-600">Category</label>
             <div class="relative">
-              <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49]">
+              <select id="category-select" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49]">
                 <optgroup label="Income">
                   <option value="salary_primary">Primary Salary</option>
                   <option value="salary_side">Side-Project Revenue</option>
@@ -383,20 +383,66 @@
         function setTrackType(type) {
             const indicator = document.getElementById('type-indicator');
             const buttons = indicator.parentElement.querySelectorAll('button');
+            const responsibilityWrapper = document.getElementById('responsibility-wrapper');
+            const categorySelect = document.getElementById('category-select');
 
             if (type === 'expense') {
                 indicator.style.transform = 'translateX(0)';
                 buttons[0].classList.replace('text-slate-500', 'text-slate-800');
                 buttons[1].classList.replace('text-slate-800', 'text-slate-500');
+
+                // Show Responsibility
+                if (responsibilityWrapper) {
+                    responsibilityWrapper.classList.remove('hidden');
+                }
+
+                // Show only Expense categories
+                if (categorySelect) {
+                    Array.from(categorySelect.querySelectorAll('optgroup')).forEach(optGroup => {
+                        if (optGroup.label === 'Expense') {
+                            optGroup.style.display = '';
+                            optGroup.disabled = false;
+                        } else {
+                            optGroup.style.display = 'none';
+                            optGroup.disabled = true;
+                        }
+                    });
+                    const firstExpense = categorySelect.querySelector('optgroup[label="Expense"] option');
+                    if (firstExpense) firstExpense.selected = true;
+                }
             } else {
                 indicator.style.transform = 'translateX(100%)';
                 buttons[1].classList.replace('text-slate-500', 'text-slate-800');
                 buttons[0].classList.replace('text-slate-800', 'text-slate-500');
+
+                // Hide Responsibility
+                if (responsibilityWrapper) {
+                    responsibilityWrapper.classList.add('hidden');
+                }
+
+                // Show only Income categories
+                if (categorySelect) {
+                    Array.from(categorySelect.querySelectorAll('optgroup')).forEach(optGroup => {
+                        if (optGroup.label === 'Income') {
+                            optGroup.style.display = '';
+                            optGroup.disabled = false;
+                        } else {
+                            optGroup.style.display = 'none';
+                            optGroup.disabled = true;
+                        }
+                    });
+                    const firstIncome = categorySelect.querySelector('optgroup[label="Income"] option');
+                    if (firstIncome) firstIncome.selected = true;
+                }
             }
         }
 
         // Initialize lucide icons for the static parts
         lucide.createIcons();
+
+        // Initialize default track state
+        setTrackType('expense');
+
 
         // Page loader function
         async function loadPage(pageName, title, element) {
