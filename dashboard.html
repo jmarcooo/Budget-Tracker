@@ -2,7 +2,7 @@
   <!-- Total Net Worth Card (Adapted to match Goals Dark Card) -->
   <div class="bg-[#1e2e38] rounded-2xl p-5 text-white shadow-md relative overflow-hidden">
     <div class="relative z-10">
-      <p class="text-[#3edfa4] text-[11px] font-bold tracking-widest mb-1 uppercase">Total Balance</p>
+      <p class="text-[#3edfa4] text-[11px] font-bold tracking-widest mb-1 uppercase">Total Joint Balance</p>
       <div class="flex items-baseline gap-1">
         <h1 class="text-4xl font-bold">₱124,500.00</h1>
       </div>
@@ -23,11 +23,11 @@
 
   <!-- Quick Actions -->
   <div class="flex gap-2 overflow-x-auto pb-1 pt-2 scrollbar-hide justify-between">
-    <div class="flex flex-col items-center gap-1.5 cursor-pointer">
-      <div class="w-12 h-12 bg-[#e0faee] rounded-[18px] flex items-center justify-center shadow-sm">
-        <i data-lucide="credit-card" class="w-6 h-6 text-[#006e49]"></i>
+    <div class="flex flex-col items-center gap-1.5 cursor-pointer" onclick="toggleSavingsDrawer()">
+      <div class="w-12 h-12 bg-[#e0faee] rounded-[18px] flex items-center justify-center shadow-sm hover:bg-[#c9f5df] transition-colors">
+        <i data-lucide="piggy-bank" class="w-6 h-6 text-[#006e49]"></i>
       </div>
-      <span class="text-[12px] font-semibold text-slate-700">Cards</span>
+      <span class="text-[12px] font-semibold text-slate-700">Savings</span>
     </div>
     <div class="flex flex-col items-center gap-1.5 cursor-pointer">
       <div class="w-12 h-12 bg-[#d1ddf8] rounded-[18px] flex items-center justify-center shadow-sm">
@@ -53,7 +53,7 @@
   <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
     <div class="flex justify-between items-center mb-4">
       <h3 class="font-bold text-[19px] text-slate-800">Recent Transactions</h3>
-      <button class="text-[#006e49] font-bold text-[13px] flex items-center" onclick="loadPage('activity', 'Activity', document.querySelectorAll('.nav-item')[3])">
+      <button class="text-[#006e49] font-bold text-[13px] flex items-center" onclick="loadPage('activity', 'Activity', document.querySelectorAll('.nav-item')[2])">
         See All <i data-lucide="chevron-right" class="w-4 h-4"></i>
       </button>
     </div>
