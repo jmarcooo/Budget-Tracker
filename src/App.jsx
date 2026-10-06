@@ -184,7 +184,7 @@ function App() {
             </div>
 
             <div className="mb-4 rounded-[14px] overflow-hidden h-28 relative mt-2">
-              <img src="/kyoto.png" alt="Kyoto" className="w-full h-full object-cover" />
+              <img src="./kyoto.png" alt="Kyoto" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-3">
                 <span className="text-white text-[11px] font-bold">Autumn Journey • 8 months left</span>
               </div>
