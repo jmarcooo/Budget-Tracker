@@ -139,8 +139,74 @@
             </div>
           </div>
 
-          <button class="w-full bg-[#006e49] text-white font-bold py-4 rounded-xl shadow-md flex items-center justify-center gap-2">
+          <button class="w-full bg-[#006e49] text-white font-bold py-4 rounded-xl shadow-md flex items-center justify-center gap-2" onclick="toggleAddAccountModal(); toggleSavingsDrawer();">
             <i data-lucide="plus" class="w-5 h-5"></i> Add Account
+          </button>
+        </div>
+      </div>
+
+      <!-- Add Account Modal Backdrop -->
+      <div id="add-account-modal-backdrop" class="absolute inset-0 bg-slate-900/40 z-[80] backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleAddAccountModal()"></div>
+
+      <!-- Add Account Modal Content -->
+      <div id="add-account-modal" class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[32px] z-[90] transform translate-y-full transition-transform duration-300 ease-out flex flex-col">
+        <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-2"></div>
+        <div class="px-6 py-4 pb-8 space-y-6">
+          <div class="flex justify-between items-center">
+            <h2 class="text-xl font-bold text-slate-800">Add Account</h2>
+            <button class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleAddAccountModal()">
+              <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Account Name -->
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-slate-600">Account Name</label>
+              <input type="text" placeholder="e.g. BPI Savings" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-medium text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] placeholder:text-slate-400" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Account Type -->
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-slate-600">Account Type</label>
+                <div class="relative">
+                  <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
+                    <option value="savings">Savings</option>
+                    <option value="wallet">E-Wallet</option>
+                    <option value="cash">Cash</option>
+                    <option value="credit">Credit Card</option>
+                  </select>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                </div>
+              </div>
+
+              <!-- Owner -->
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-slate-600">Owner</label>
+                <div class="relative">
+                  <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
+                    <option value="joint">Joint</option>
+                    <option value="husband">Husband</option>
+                    <option value="wife">Wife</option>
+                  </select>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Initial Balance -->
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-slate-600">Initial Balance</label>
+              <div class="flex items-center w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus-within:border-[#006e49] focus-within:ring-1 focus-within:ring-[#006e49]">
+                <span class="text-slate-400 font-bold mr-2">₱</span>
+                <input type="number" placeholder="0.00" class="w-full bg-transparent font-medium text-slate-700 outline-none placeholder:text-slate-400" />
+              </div>
+            </div>
+          </div>
+
+          <button class="w-full bg-[#006e49] text-white font-bold py-4 rounded-xl shadow-md" onclick="toggleAddAccountModal()">
+            Create Account
           </button>
         </div>
       </div>
@@ -244,6 +310,21 @@
                 backdrop.classList.remove('opacity-0', 'pointer-events-none');
             } else {
                 drawer.classList.add('translate-y-full');
+                backdrop.classList.add('opacity-0', 'pointer-events-none');
+            }
+        }
+
+        function toggleAddAccountModal() {
+            const modal = document.getElementById('add-account-modal');
+            const backdrop = document.getElementById('add-account-modal-backdrop');
+
+            if (modal.classList.contains('translate-y-full')) {
+                // Open
+                modal.classList.remove('translate-y-full');
+                backdrop.classList.remove('opacity-0', 'pointer-events-none');
+            } else {
+                // Close
+                modal.classList.add('translate-y-full');
                 backdrop.classList.add('opacity-0', 'pointer-events-none');
             }
         }
