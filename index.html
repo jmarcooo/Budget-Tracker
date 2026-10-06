@@ -72,14 +72,15 @@
       <!-- Savings Drawer Content -->
       <div id="savings-drawer" class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[32px] z-[70] transform translate-y-full transition-transform duration-300 ease-out flex flex-col max-h-[85%]">
         <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-2 shrink-0"></div>
-        <div class="px-6 py-4 pb-8 space-y-6 overflow-y-auto">
-          <div class="flex justify-between items-center sticky top-0 bg-white py-2 z-10">
-            <h2 class="text-[15px] font-bold text-slate-800">Joint Savings</h2>
-            <button class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleSavingsDrawer()">
-              <i data-lucide="x" class="w-4 h-4"></i>
-            </button>
-          </div>
 
+        <div class="flex justify-between items-center px-6 py-2 shrink-0">
+          <h2 class="text-[15px] font-bold text-slate-800">Joint Savings</h2>
+          <button class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleSavingsDrawer()">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="px-6 pt-4 pb-8 space-y-6 overflow-y-auto">
           <div class="space-y-4">
             <!-- Account 1 -->
             <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
@@ -148,14 +149,15 @@
       <!-- Add Account Modal Content -->
       <div id="add-account-modal" class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[32px] z-[90] transform translate-y-full transition-transform duration-300 ease-out flex flex-col max-h-[85%]">
         <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-2 shrink-0"></div>
-        <div class="px-6 py-4 pb-6 space-y-4 overflow-y-auto">
-          <div class="flex justify-between items-center sticky top-0 bg-white py-2 z-10">
-            <h2 class="text-[15px] font-bold text-slate-800">Add Account</h2>
-            <button class="w-7 h-7 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleAddAccountModal()">
-              <i data-lucide="x" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
 
+        <div class="flex justify-between items-center px-6 py-2 shrink-0">
+          <h2 class="text-[15px] font-bold text-slate-800">Add Account</h2>
+          <button class="w-7 h-7 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleAddAccountModal()">
+            <i data-lucide="x" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <div class="px-6 pt-2 pb-6 space-y-4 overflow-y-auto">
           <div class="space-y-3 mt-1">
             <!-- Account Name -->
             <div class="space-y-1">
@@ -214,14 +216,15 @@
       <!-- Track Modal Content -->
       <div id="track-modal" class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[32px] z-[70] transform translate-y-full transition-transform duration-300 ease-out flex flex-col max-h-[85%]">
         <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-2 shrink-0"></div>
-        <div class="px-6 py-4 pb-6 space-y-4 overflow-y-auto">
-          <div class="flex justify-between items-center sticky top-0 bg-white py-2 z-10">
-            <h2 class="text-[15px] font-bold text-slate-800">Track Transaction</h2>
-            <button class="w-7 h-7 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleTrackModal()">
-              <i data-lucide="x" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
 
+        <div class="flex justify-between items-center px-6 py-2 shrink-0">
+          <h2 class="text-[15px] font-bold text-slate-800">Track Transaction</h2>
+          <button class="w-7 h-7 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleTrackModal()">
+            <i data-lucide="x" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
+
+        <div class="px-6 pt-2 pb-6 space-y-4 overflow-y-auto">
           <!-- Type Toggle -->
           <div class="flex bg-slate-100 rounded-xl p-1 relative mt-1">
             <div id="type-indicator" class="absolute left-1 top-1 bottom-1 w-[calc(50%-4px)] bg-white rounded-lg shadow-sm transition-transform duration-300"></div>
