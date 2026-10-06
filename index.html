@@ -23,7 +23,7 @@
               <path d="M9 12l2 2 4-4" />
             </svg>
           </div>
-          <span class="font-bold text-xl text-[#006e49]">Vault</span>
+          <span class="font-bold text-[15px] text-[#006e49]">Vault</span>
         </div>
         <div id="header-title" class="font-semibold text-[17px] text-slate-800 absolute left-1/2 -translate-x-1/2">Dashboard</div>
         <div class="flex -space-x-3">
@@ -74,7 +74,7 @@
         <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-2 shrink-0"></div>
         <div class="px-6 py-4 pb-8 space-y-6 overflow-y-auto">
           <div class="flex justify-between items-center sticky top-0 bg-white py-2 z-10">
-            <h2 class="text-xl font-bold text-slate-800">Joint Savings</h2>
+            <h2 class="text-[15px] font-bold text-slate-800">Joint Savings</h2>
             <button class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleSavingsDrawer()">
               <i data-lucide="x" class="w-4 h-4"></i>
             </button>
@@ -150,7 +150,7 @@
         <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-2 shrink-0"></div>
         <div class="px-6 py-4 pb-8 space-y-6 overflow-y-auto">
           <div class="flex justify-between items-center sticky top-0 bg-white py-2 z-10">
-            <h2 class="text-xl font-bold text-slate-800">Add Account</h2>
+            <h2 class="text-[15px] font-bold text-slate-800">Add Account</h2>
             <button class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleAddAccountModal()">
               <i data-lucide="x" class="w-4 h-4"></i>
             </button>
@@ -159,14 +159,14 @@
           <div class="space-y-4 mt-2">
             <!-- Account Name -->
             <div class="space-y-2">
-              <label class="text-sm font-semibold text-slate-600">Account Name</label>
+              <label class="text-[11px] font-semibold text-slate-600">Account Name</label>
               <input type="text" placeholder="e.g. BPI Savings" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-medium text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] placeholder:text-slate-400" />
             </div>
 
             <div class="grid grid-cols-2 gap-4">
               <!-- Account Type -->
               <div class="space-y-2">
-                <label class="text-sm font-semibold text-slate-600">Account Type</label>
+                <label class="text-[11px] font-semibold text-slate-600">Account Type</label>
                 <div class="relative">
                   <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
                     <option value="savings">Savings</option>
@@ -180,7 +180,7 @@
 
               <!-- Owner -->
               <div class="space-y-2">
-                <label class="text-sm font-semibold text-slate-600">Owner</label>
+                <label class="text-[11px] font-semibold text-slate-600">Owner</label>
                 <div class="relative">
                   <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
                     <option value="joint">Joint</option>
@@ -194,7 +194,7 @@
 
             <!-- Initial Balance -->
             <div class="space-y-2">
-              <label class="text-sm font-semibold text-slate-600">Initial Balance</label>
+              <label class="text-[11px] font-semibold text-slate-600">Initial Balance</label>
               <div class="flex items-center w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus-within:border-[#006e49] focus-within:ring-1 focus-within:ring-[#006e49]">
                 <span class="text-slate-400 font-bold mr-2">₱</span>
                 <input type="number" placeholder="0.00" class="w-full bg-transparent font-medium text-slate-700 outline-none placeholder:text-slate-400" />
@@ -216,7 +216,7 @@
         <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-2 shrink-0"></div>
         <div class="px-6 py-4 pb-8 space-y-6 overflow-y-auto">
           <div class="flex justify-between items-center sticky top-0 bg-white py-2 z-10">
-            <h2 class="text-xl font-bold text-slate-800">Track Transaction</h2>
+            <h2 class="text-[15px] font-bold text-slate-800">Track Transaction</h2>
             <button class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleTrackModal()">
               <i data-lucide="x" class="w-4 h-4"></i>
             </button>
@@ -225,15 +225,15 @@
           <!-- Type Toggle -->
           <div class="flex bg-slate-100 rounded-xl p-1 relative mt-2">
             <div id="type-indicator" class="absolute left-1 top-1 bottom-1 w-[calc(50%-4px)] bg-white rounded-lg shadow-sm transition-transform duration-300"></div>
-            <button class="flex-1 py-2.5 text-sm font-bold text-slate-800 relative z-10" onclick="setTrackType('expense')">Expense</button>
-            <button class="flex-1 py-2.5 text-sm font-bold text-slate-500 relative z-10" onclick="setTrackType('income')">Income</button>
+            <button class="flex-1 py-2.5 text-[11px] font-bold text-slate-800 relative z-10" onclick="setTrackType('expense')">Expense</button>
+            <button class="flex-1 py-2.5 text-[11px] font-bold text-slate-500 relative z-10" onclick="setTrackType('income')">Income</button>
           </div>
 
           <!-- Amount -->
           <div class="flex flex-col items-center py-4">
             <span class="text-slate-500 font-semibold mb-1">Amount</span>
-            <div class="flex items-center text-4xl font-bold text-slate-800">
-              <span class="text-2xl mr-1 text-slate-400">₱</span>
+            <div class="flex items-center text-3xl font-bold text-slate-800">
+              <span class="text-[15px] mr-1 text-slate-400">₱</span>
               <input type="number" placeholder="0.00" class="w-full max-w-[200px] text-center bg-transparent outline-none placeholder:text-slate-300" />
             </div>
           </div>
@@ -241,7 +241,7 @@
           <div class="grid grid-cols-2 gap-4">
             <!-- Account -->
             <div class="space-y-2">
-              <label class="text-sm font-semibold text-slate-600">Account</label>
+              <label class="text-[11px] font-semibold text-slate-600">Account</label>
               <div class="relative">
                 <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
                   <option value="joint">Joint Account</option>
@@ -254,7 +254,7 @@
 
             <!-- Member (Who paid/earned) -->
             <div class="space-y-2">
-              <label class="text-sm font-semibold text-slate-600">Member</label>
+              <label class="text-[11px] font-semibold text-slate-600">Member</label>
               <div class="relative">
                 <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
                   <option value="both">Both (Shared)</option>
@@ -269,7 +269,7 @@
           <div class="grid grid-cols-2 gap-4">
             <!-- Responsibility Toggle -->
             <div class="space-y-2">
-              <label class="text-sm font-semibold text-slate-600">Responsibility</label>
+              <label class="text-[11px] font-semibold text-slate-600">Responsibility</label>
               <div class="relative">
                 <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
                   <option value="shared">Shared Expense</option>
@@ -281,7 +281,7 @@
 
             <!-- Recurring Toggle -->
             <div class="space-y-2">
-              <label class="text-sm font-semibold text-slate-600">Frequency</label>
+              <label class="text-[11px] font-semibold text-slate-600">Frequency</label>
               <div class="relative">
                 <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
                   <option value="oneoff">One-off</option>
@@ -295,7 +295,7 @@
 
           <!-- Category -->
           <div class="space-y-2">
-            <label class="text-sm font-semibold text-slate-600">Category</label>
+            <label class="text-[11px] font-semibold text-slate-600">Category</label>
             <div class="relative">
               <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49]">
                 <optgroup label="Income">
@@ -319,7 +319,7 @@
 
           <!-- Note -->
           <div class="space-y-2">
-            <label class="text-sm font-semibold text-slate-600">Note (Optional)</label>
+            <label class="text-[11px] font-semibold text-slate-600">Note (Optional)</label>
             <input type="text" placeholder="What was this for?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-medium text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] placeholder:text-slate-400" />
           </div>
 
