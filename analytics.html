@@ -2,26 +2,27 @@
 
   <!-- High Level Summary -->
   <div class="grid grid-cols-2 gap-3">
-    <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 flex flex-col justify-between h-28 relative overflow-hidden">
+    <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 flex flex-col justify-between h-32 relative overflow-hidden">
       <div class="flex justify-between items-start mb-2 relative z-10">
-        <div class="w-10 h-10 bg-[#e0faee] rounded-[14px] flex items-center justify-center">
-          <i data-lucide="trending-up" class="w-5 h-5 text-[#006e49]"></i>
+        <div class="w-10 h-10 bg-[#fbe7e6] rounded-[14px] flex items-center justify-center">
+          <i data-lucide="flame" class="w-5 h-5 text-[#c93b32]"></i>
         </div>
+        <span class="bg-[#fbe7e6] text-[#c93b32] text-[10px] font-bold px-2 py-0.5 rounded-full">+12%</span>
       </div>
       <div class="relative z-10">
-        <p class="text-[12px] font-semibold text-slate-500 mb-0.5">Total Saved</p>
-        <p class="font-bold text-[19px] text-slate-800">₱34,850</p>
+        <p class="text-[12px] font-semibold text-slate-500 mb-0.5">Monthly Burn Rate</p>
+        <p class="font-bold text-[19px] text-slate-800">₱42,500</p>
       </div>
     </div>
-    <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 flex flex-col justify-between h-28 relative overflow-hidden">
+    <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 flex flex-col justify-between h-32 relative overflow-hidden">
       <div class="flex justify-between items-start mb-2 relative z-10">
-        <div class="w-10 h-10 bg-[#d1ddf8] rounded-[14px] flex items-center justify-center">
-          <i data-lucide="award" class="w-5 h-5 text-[#294c6f]"></i>
+        <div class="w-10 h-10 bg-[#e0faee] rounded-[14px] flex items-center justify-center">
+          <i data-lucide="arrow-down-left" class="w-5 h-5 text-[#006e49]"></i>
         </div>
       </div>
-      <div class="relative z-10">
-        <p class="text-[12px] font-semibold text-slate-500 mb-0.5">Interest Earned</p>
-        <p class="font-bold text-[19px] text-slate-800">₱1,420.50</p>
+      <div class="relative z-10 mt-1">
+        <p class="text-[12px] font-semibold text-slate-500 mb-0.5">Total Inflow (Joint)</p>
+        <p class="font-bold text-[19px] text-slate-800">₱185,000</p>
       </div>
     </div>
   </div>
@@ -94,27 +95,55 @@
     </div>
   </div>
 
-  <!-- Goal Distribution -->
+  <!-- Shared Spending Breakdown -->
   <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
     <div class="flex justify-between items-center mb-4">
       <div class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-[#e0faee] rounded-lg flex items-center justify-center">
-          <i data-lucide="pie-chart" class="w-4 h-4 text-[#006e49]"></i>
+        <div class="w-8 h-8 bg-[#fbe7e6] rounded-lg flex items-center justify-center">
+          <i data-lucide="pie-chart" class="w-4 h-4 text-[#c93b32]"></i>
         </div>
-        <h3 class="font-bold text-[17px] text-slate-800">Goal Distribution</h3>
+        <h3 class="font-bold text-[17px] text-slate-800">Shared Spending</h3>
+      </div>
+      <span class="text-xs font-semibold text-slate-500">Oct 2026</span>
+    </div>
+
+    <!-- Visual CSS Donut Chart (Approximation) -->
+    <div class="flex justify-center mb-6 mt-2 relative">
+      <div class="w-32 h-32 rounded-full border-[12px] border-[#006e49] relative">
+        <!-- Overlay borders for segments (visual trick) -->
+        <div class="absolute inset-[-12px] rounded-full border-[12px] border-transparent border-t-[#c93b32] border-r-[#c93b32] rotate-45"></div>
+        <div class="absolute inset-[-12px] rounded-full border-[12px] border-transparent border-b-[#a86500] -rotate-12"></div>
+        <div class="absolute inset-[-12px] rounded-full border-[12px] border-transparent border-l-[#4a5a7b] rotate-[-40deg] opacity-70"></div>
+        <div class="absolute inset-0 flex items-center justify-center flex-col">
+          <span class="text-[10px] font-semibold text-slate-400">Total</span>
+          <span class="text-[15px] font-bold text-slate-800">₱42.5k</span>
+        </div>
       </div>
     </div>
 
     <div class="space-y-4">
       <div class="flex items-center gap-3">
+        <div class="w-3 h-3 rounded-full bg-[#c93b32] shrink-0"></div>
+        <div class="flex-1">
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[13px] font-bold text-slate-800">Rent & Utilities</span>
+            <span class="text-[13px] font-bold text-[#c93b32]">45%</span>
+          </div>
+          <div class="w-full bg-[#f0f2f5] rounded-full h-1.5">
+            <div class="bg-[#c93b32] h-1.5 rounded-full" style="width: 45%"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
         <div class="w-3 h-3 rounded-full bg-[#006e49] shrink-0"></div>
         <div class="flex-1">
           <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[13px] font-bold text-slate-800">Emergency Buffer</span>
-            <span class="text-[13px] font-bold text-[#006e49]">35%</span>
+            <span class="text-[13px] font-bold text-slate-800">Groceries & Dining</span>
+            <span class="text-[13px] font-bold text-[#006e49]">30%</span>
           </div>
           <div class="w-full bg-[#f0f2f5] rounded-full h-1.5">
-            <div class="bg-[#006e49] h-1.5 rounded-full" style="width: 35%"></div>
+            <div class="bg-[#006e49] h-1.5 rounded-full" style="width: 30%"></div>
           </div>
         </div>
       </div>
@@ -123,40 +152,78 @@
         <div class="w-3 h-3 rounded-full bg-[#a86500] shrink-0"></div>
         <div class="flex-1">
           <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[13px] font-bold text-slate-800">Tesla Downpayment</span>
-            <span class="text-[13px] font-bold text-[#a86500]">40%</span>
+            <span class="text-[13px] font-bold text-slate-800">Transportation</span>
+            <span class="text-[13px] font-bold text-[#a86500]">15%</span>
           </div>
           <div class="w-full bg-[#f0f2f5] rounded-full h-1.5">
-            <div class="bg-[#a86500] h-1.5 rounded-full" style="width: 40%"></div>
+            <div class="bg-[#a86500] h-1.5 rounded-full" style="width: 15%"></div>
           </div>
         </div>
       </div>
 
       <div class="flex items-center gap-3">
-        <div class="w-3 h-3 rounded-full bg-[#6b7c9e] shrink-0"></div>
+        <div class="w-3 h-3 rounded-full bg-[#4a5a7b] shrink-0"></div>
         <div class="flex-1">
           <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[13px] font-bold text-slate-800">Kyoto Trip</span>
-            <span class="text-[13px] font-bold text-[#6b7c9e]">18%</span>
+            <span class="text-[13px] font-bold text-slate-800">Other Shared</span>
+            <span class="text-[13px] font-bold text-[#4a5a7b]">10%</span>
           </div>
           <div class="w-full bg-[#eaf1fb] rounded-full h-1.5">
-            <div class="bg-[#6b7c9e] h-1.5 rounded-full" style="width: 18%"></div>
+            <div class="bg-[#4a5a7b] h-1.5 rounded-full" style="width: 10%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Income Breakdown -->
+  <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 mt-4">
+    <div class="flex justify-between items-center mb-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 bg-[#e0faee] rounded-lg flex items-center justify-center">
+          <i data-lucide="briefcase" class="w-4 h-4 text-[#006e49]"></i>
+        </div>
+        <h3 class="font-bold text-[17px] text-slate-800">Household Income</h3>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <!-- Jon's Income -->
+      <div class="flex items-center gap-3">
+        <img src="https://i.pravatar.cc/100?img=11" alt="Jon" class="w-8 h-8 rounded-full border-2 border-slate-100 shrink-0" />
+        <div class="flex-1">
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-[13px] font-bold text-slate-800">Jon</span>
+            <span class="text-[13px] font-bold text-slate-800">₱105,000</span>
+          </div>
+          <div class="w-full bg-[#f0f2f5] rounded-full h-2 flex overflow-hidden">
+            <div class="bg-[#4a5a7b] h-full border-r border-white/50" style="width: 80%" title="Primary Salary"></div>
+            <div class="bg-[#7c8eb5] h-full" style="width: 20%" title="Side-Project"></div>
+          </div>
+          <div class="flex gap-4 mt-1">
+             <span class="text-[10px] text-slate-500 font-semibold"><span class="inline-block w-1.5 h-1.5 rounded-full bg-[#4a5a7b] mr-0.5"></span> Salary</span>
+             <span class="text-[10px] text-slate-500 font-semibold"><span class="inline-block w-1.5 h-1.5 rounded-full bg-[#7c8eb5] mr-0.5"></span> Side Project</span>
           </div>
         </div>
       </div>
 
+      <!-- Patricia's Income -->
       <div class="flex items-center gap-3">
-        <div class="w-3 h-3 rounded-full bg-[#00895c] shrink-0"></div>
+        <img src="https://i.pravatar.cc/100?img=47" alt="Patricia" class="w-8 h-8 rounded-full border-2 border-slate-100 shrink-0" />
         <div class="flex-1">
           <div class="flex justify-between items-center mb-1.5">
-            <span class="text-[13px] font-bold text-slate-800">MacBook Pro</span>
-            <span class="text-[13px] font-bold text-[#00895c]">7%</span>
+            <span class="text-[13px] font-bold text-slate-800">Patricia</span>
+            <span class="text-[13px] font-bold text-slate-800">₱80,000</span>
           </div>
-          <div class="w-full bg-[#d1ddf8] rounded-full h-1.5">
-            <div class="bg-[#00895c] h-1.5 rounded-full" style="width: 7%"></div>
+          <div class="w-full bg-[#f0f2f5] rounded-full h-2 flex overflow-hidden">
+            <div class="bg-[#00895c] h-full" style="width: 100%" title="Primary Salary"></div>
+          </div>
+           <div class="flex gap-4 mt-1">
+             <span class="text-[10px] text-slate-500 font-semibold"><span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00895c] mr-0.5"></span> Salary</span>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 

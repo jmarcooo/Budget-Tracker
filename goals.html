@@ -139,8 +139,11 @@
           </div>
 
 
-          <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
-            <div class="flex justify-between items-start mb-4">
+          <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-[#d1ddf8] text-[#1c3f60] text-[10px] font-bold px-3 py-1 rounded-bl-xl z-10 flex items-center gap-1 shadow-sm">
+              <i data-lucide="users" class="w-3 h-3"></i> Joint Goal
+            </div>
+            <div class="flex justify-between items-start mb-4 mt-2">
               <div class="flex gap-3">
                 <div class="w-12 h-12 bg-[#d1ddf8] rounded-[18px] flex items-center justify-center mt-1">
                   <i data-lucide="plane" class="w-6 h-6 text-[#4a5a7b]"></i>
@@ -149,9 +152,6 @@
                   <h3 class="font-bold text-[19px] text-slate-800">Kyoto Trip 2025</h3>
                   <p class="text-slate-500 text-[13px] leading-snug mt-0.5">Autumn foliage • Target: Oct<br/>2025</p>
                 </div>
-              </div>
-              <div class="bg-[#d1e0fc] text-[#1c3f60] text-[11px] font-bold px-3 py-1.5 rounded-full flex items-center gap-1 leading-snug mt-1 shadow-sm">
-                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#00895c]"></i> Flights<br/>booked
               </div>
             </div>
 
@@ -163,21 +163,39 @@
             </div>
 
             <div class="flex items-baseline gap-1.5 mb-2">
-              <span class="text-2xl font-bold text-slate-800">₱3,800</span>
-              <span class="text-slate-400 text-[15px]">/ ₱5,000</span>
+              <span class="text-2xl font-bold text-slate-800">₱380,000</span>
+              <span class="text-slate-400 text-[15px]">/ ₱500,000</span>
               <span class="ml-auto text-[#4a5a7b] font-bold text-sm">76%</span>
             </div>
-            <div class="w-full bg-[#eaf1fb] rounded-full h-2 mb-4">
-              <div class="bg-[#6b7c9e] h-2 rounded-full" style="width: 76%"></div>
+
+            <!-- Joint Progress Bar -->
+            <div class="w-full bg-[#eaf1fb] rounded-full h-3 mb-2 flex overflow-hidden shadow-inner">
+              <div class="bg-[#4a5a7b] h-full" style="width: 45%" title="Jon's Contribution: ₱171,000"></div>
+              <div class="bg-[#7c8eb5] h-full border-l border-white/30" style="width: 31%" title="Patricia's Contribution: ₱209,000"></div>
             </div>
 
-            <div class="flex justify-between items-center">
-              <div class="bg-[#eef3fb] text-[#4a5a7b] text-[13px] font-bold px-3 py-1.5 rounded-[10px] flex items-center gap-1.5">
-                <i data-lucide="calendar" class="w-3.5 h-3.5"></i> +₱200/mo needed pace
+            <!-- Contributor Legend -->
+            <div class="flex justify-between items-center mb-4 px-1">
+              <div class="flex items-center gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-[#4a5a7b]"></div>
+                <span class="text-[11px] font-semibold text-slate-500">Jon (45%)</span>
               </div>
-              <button class="text-[#006e49] font-bold text-[13px] flex items-center">
-                Deposit <i data-lucide="chevron-right" class="w-4 h-4"></i>
-              </button>
+              <div class="flex items-center gap-1.5">
+                <div class="w-2.5 h-2.5 rounded-full bg-[#7c8eb5]"></div>
+                <span class="text-[11px] font-semibold text-slate-500">Patricia (31%)</span>
+              </div>
+            </div>
+
+            <div class="flex justify-between items-center pt-2 border-t border-slate-100">
+              <div class="flex -space-x-2">
+                <img src="https://i.pravatar.cc/100?img=11" alt="Jon" class="w-7 h-7 rounded-full border-2 border-white" />
+                <img src="https://i.pravatar.cc/100?img=47" alt="Patricia" class="w-7 h-7 rounded-full border-2 border-white" />
+              </div>
+              <div class="flex gap-2">
+                <button class="bg-[#f0f4fb] text-[#4a5a7b] font-bold text-[12px] px-3 py-1.5 rounded-lg flex items-center shadow-sm">
+                  Split Deposit
+                </button>
+              </div>
             </div>
           </div>
 

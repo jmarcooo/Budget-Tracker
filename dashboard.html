@@ -49,6 +49,36 @@
     </div>
   </div>
 
+  <!-- Settlement Widget: Who Owes Whom -->
+  <div class="bg-gradient-to-br from-[#d1ddf8] to-[#e4ebf8] rounded-2xl p-4 shadow-sm border border-[#c4d4f7] relative overflow-hidden">
+    <div class="absolute top-0 right-0 bg-[#a6bff3] text-[#1c3f60] text-[10px] font-bold px-3 py-1 rounded-bl-xl z-10">
+      Running Balance
+    </div>
+    <div class="flex justify-between items-center z-10 relative">
+      <div class="flex items-center gap-3">
+        <div class="flex -space-x-3">
+          <img src="https://i.pravatar.cc/100?img=11" alt="Jon" class="w-10 h-10 rounded-full border-2 border-white shadow-sm relative z-10" />
+          <img src="https://i.pravatar.cc/100?img=47" alt="Patricia" class="w-10 h-10 rounded-full border-2 border-[#d1ddf8] shadow-sm relative z-0" />
+        </div>
+        <div>
+          <h4 class="font-bold text-[15px] text-[#1c3f60]">Jon owes Patricia</h4>
+          <p class="text-[12px] text-[#345b80] mt-0.5 font-semibold">For shared groceries</p>
+        </div>
+      </div>
+      <div class="text-right">
+        <p class="font-bold text-2xl text-[#1c3f60]">₱1,250</p>
+      </div>
+    </div>
+    <div class="mt-4 flex gap-2 relative z-10">
+      <button class="flex-1 bg-white text-[#294c6f] font-bold text-[13px] py-2 rounded-xl shadow-sm flex items-center justify-center gap-1.5">
+        <i data-lucide="check-circle-2" class="w-4 h-4"></i> Settle Up
+      </button>
+      <button class="flex-1 bg-[#1c3f60] text-white font-bold text-[13px] py-2 rounded-xl shadow-sm flex items-center justify-center gap-1.5">
+        <i data-lucide="history" class="w-4 h-4"></i> Details
+      </button>
+    </div>
+  </div>
+
   <!-- Recent Activity Teaser (Adapted to match Goals Cards) -->
   <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
     <div class="flex justify-between items-center mb-4">
