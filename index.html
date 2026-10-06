@@ -148,61 +148,61 @@
       <!-- Add Account Modal Content -->
       <div id="add-account-modal" class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[32px] z-[90] transform translate-y-full transition-transform duration-300 ease-out flex flex-col max-h-[85%]">
         <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-2 shrink-0"></div>
-        <div class="px-6 py-4 pb-8 space-y-6 overflow-y-auto">
+        <div class="px-6 py-4 pb-6 space-y-4 overflow-y-auto">
           <div class="flex justify-between items-center sticky top-0 bg-white py-2 z-10">
             <h2 class="text-[15px] font-bold text-slate-800">Add Account</h2>
-            <button class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleAddAccountModal()">
-              <i data-lucide="x" class="w-4 h-4"></i>
+            <button class="w-7 h-7 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleAddAccountModal()">
+              <i data-lucide="x" class="w-3.5 h-3.5"></i>
             </button>
           </div>
 
-          <div class="space-y-4 mt-2">
+          <div class="space-y-3 mt-1">
             <!-- Account Name -->
-            <div class="space-y-2">
+            <div class="space-y-1">
               <label class="text-[11px] font-semibold text-slate-600">Account Name</label>
-              <input type="text" placeholder="e.g. BPI Savings" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-medium text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] placeholder:text-slate-400" />
+              <input type="text" placeholder="e.g. BPI Savings" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] font-medium text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] placeholder:text-slate-400" />
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-2 gap-3">
               <!-- Account Type -->
-              <div class="space-y-2">
+              <div class="space-y-1">
                 <label class="text-[11px] font-semibold text-slate-600">Account Type</label>
                 <div class="relative">
-                  <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
+                  <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
                     <option value="savings">Savings</option>
                     <option value="wallet">E-Wallet</option>
                     <option value="cash">Cash</option>
                     <option value="credit">Credit Card</option>
                   </select>
-                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
                 </div>
               </div>
 
               <!-- Owner -->
-              <div class="space-y-2">
+              <div class="space-y-1">
                 <label class="text-[11px] font-semibold text-slate-600">Owner</label>
                 <div class="relative">
-                  <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
+                  <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
                     <option value="joint">Joint</option>
                     <option value="jon">Jon</option>
                     <option value="patricia">Patricia</option>
                   </select>
-                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                  <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
                 </div>
               </div>
             </div>
 
             <!-- Initial Balance -->
-            <div class="space-y-2">
+            <div class="space-y-1">
               <label class="text-[11px] font-semibold text-slate-600">Initial Balance</label>
-              <div class="flex items-center w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 focus-within:border-[#006e49] focus-within:ring-1 focus-within:ring-[#006e49]">
-                <span class="text-slate-400 font-bold mr-2">₱</span>
-                <input type="number" placeholder="0.00" class="w-full bg-transparent font-medium text-slate-700 outline-none placeholder:text-slate-400" />
+              <div class="flex items-center w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus-within:border-[#006e49] focus-within:ring-1 focus-within:ring-[#006e49]">
+                <span class="text-slate-400 font-bold mr-2 text-[12px]">₱</span>
+                <input type="number" placeholder="0.00" class="w-full bg-transparent font-medium text-[12px] text-slate-700 outline-none placeholder:text-slate-400" />
               </div>
             </div>
           </div>
 
-          <button class="w-full bg-[#006e49] text-white font-bold py-4 rounded-xl shadow-md" onclick="toggleAddAccountModal()">
+          <button class="w-full bg-[#006e49] text-white font-bold py-3 text-[13px] rounded-xl shadow-md mt-2" onclick="toggleAddAccountModal()">
             Create Account
           </button>
         </div>
@@ -214,90 +214,90 @@
       <!-- Track Modal Content -->
       <div id="track-modal" class="absolute bottom-0 left-0 right-0 bg-white rounded-t-[32px] z-[70] transform translate-y-full transition-transform duration-300 ease-out flex flex-col max-h-[85%]">
         <div class="w-12 h-1.5 bg-slate-200 rounded-full mx-auto mt-4 mb-2 shrink-0"></div>
-        <div class="px-6 py-4 pb-8 space-y-6 overflow-y-auto">
+        <div class="px-6 py-4 pb-6 space-y-4 overflow-y-auto">
           <div class="flex justify-between items-center sticky top-0 bg-white py-2 z-10">
             <h2 class="text-[15px] font-bold text-slate-800">Track Transaction</h2>
-            <button class="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleTrackModal()">
-              <i data-lucide="x" class="w-4 h-4"></i>
+            <button class="w-7 h-7 bg-slate-100 rounded-full flex items-center justify-center text-slate-500" onclick="toggleTrackModal()">
+              <i data-lucide="x" class="w-3.5 h-3.5"></i>
             </button>
           </div>
 
           <!-- Type Toggle -->
-          <div class="flex bg-slate-100 rounded-xl p-1 relative mt-2">
+          <div class="flex bg-slate-100 rounded-xl p-1 relative mt-1">
             <div id="type-indicator" class="absolute left-1 top-1 bottom-1 w-[calc(50%-4px)] bg-white rounded-lg shadow-sm transition-transform duration-300"></div>
-            <button class="flex-1 py-2.5 text-[11px] font-bold text-slate-800 relative z-10" onclick="setTrackType('expense')">Expense</button>
-            <button class="flex-1 py-2.5 text-[11px] font-bold text-slate-500 relative z-10" onclick="setTrackType('income')">Income</button>
+            <button class="flex-1 py-1.5 text-[11px] font-bold text-slate-800 relative z-10" onclick="setTrackType('expense')">Expense</button>
+            <button class="flex-1 py-1.5 text-[11px] font-bold text-slate-500 relative z-10" onclick="setTrackType('income')">Income</button>
           </div>
 
           <!-- Amount -->
-          <div class="flex flex-col items-center py-4">
-            <span class="text-slate-500 font-semibold mb-1">Amount</span>
-            <div class="flex items-center text-3xl font-bold text-slate-800">
-              <span class="text-[15px] mr-1 text-slate-400">₱</span>
-              <input type="number" placeholder="0.00" class="w-full max-w-[200px] text-center bg-transparent outline-none placeholder:text-slate-300" />
+          <div class="flex flex-col items-center py-2">
+            <span class="text-[11px] text-slate-500 font-semibold mb-1">Amount</span>
+            <div class="flex items-center text-2xl font-bold text-slate-800">
+              <span class="text-[13px] mr-1 text-slate-400">₱</span>
+              <input type="number" placeholder="0.00" class="w-full max-w-[150px] text-center bg-transparent outline-none placeholder:text-slate-300" />
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 gap-3">
             <!-- Account -->
-            <div class="space-y-2">
+            <div class="space-y-1">
               <label class="text-[11px] font-semibold text-slate-600">Account</label>
               <div class="relative">
-                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
+                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
                   <option value="joint">Joint Account</option>
                   <option value="jon">Jon's Wallet</option>
                   <option value="patricia">Patricia's Wallet</option>
                 </select>
-                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
               </div>
             </div>
 
             <!-- Member (Who paid/earned) -->
-            <div class="space-y-2">
+            <div class="space-y-1">
               <label class="text-[11px] font-semibold text-slate-600">Member</label>
               <div class="relative">
-                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
+                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
                   <option value="both">Both (Shared)</option>
                   <option value="jon">Jon</option>
                   <option value="patricia">Patricia</option>
                 </select>
-                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
               </div>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 gap-3">
             <!-- Responsibility Toggle -->
-            <div class="space-y-2">
+            <div class="space-y-1">
               <label class="text-[11px] font-semibold text-slate-600">Responsibility</label>
               <div class="relative">
-                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
+                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
                   <option value="shared">Shared Expense</option>
                   <option value="personal">Personal Expense</option>
                 </select>
-                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
               </div>
             </div>
 
             <!-- Recurring Toggle -->
-            <div class="space-y-2">
+            <div class="space-y-1">
               <label class="text-[11px] font-semibold text-slate-600">Frequency</label>
               <div class="relative">
-                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-10">
+                <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
                   <option value="oneoff">One-off</option>
                   <option value="monthly">Monthly</option>
                   <option value="weekly">Weekly</option>
                 </select>
-                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+                <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
               </div>
             </div>
           </div>
 
           <!-- Category -->
-          <div class="space-y-2">
+          <div class="space-y-1">
             <label class="text-[11px] font-semibold text-slate-600">Category</label>
             <div class="relative">
-              <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49]">
+              <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49]">
                 <optgroup label="Income">
                   <option value="salary_primary">Primary Salary</option>
                   <option value="salary_side">Side-Project Revenue</option>
@@ -313,17 +313,17 @@
                   <option value="hobbies">Hobbies</option>
                 </optgroup>
               </select>
-              <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+              <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
             </div>
           </div>
 
           <!-- Note -->
-          <div class="space-y-2">
+          <div class="space-y-1">
             <label class="text-[11px] font-semibold text-slate-600">Note (Optional)</label>
-            <input type="text" placeholder="What was this for?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3.5 font-medium text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] placeholder:text-slate-400" />
+            <input type="text" placeholder="What was this for?" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] font-medium text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] placeholder:text-slate-400" />
           </div>
 
-          <button class="w-full bg-[#006e49] text-white font-bold py-4 rounded-xl shadow-md" onclick="toggleTrackModal()">
+          <button class="w-full bg-[#006e49] text-white font-bold py-3 text-[13px] rounded-xl shadow-md mt-2" onclick="toggleTrackModal()">
             Save Transaction
           </button>
         </div>
