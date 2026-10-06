@@ -1,101 +1,104 @@
-<div class="px-4 py-4 space-y-5 mx-auto w-full pb-8">
-  <!-- Total Net Worth Card -->
-  <div class="bg-gradient-to-br from-[#006e49] to-[#00472f] rounded-[24px] p-6 text-white shadow-lg relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full blur-3xl -mr-10 -mt-10"></div>
+<div class="px-4 py-4 space-y-4 mx-auto w-full pb-24 scrollbar-hide">
+  <!-- Total Net Worth Card (Adapted to match Goals Dark Card) -->
+  <div class="bg-[#1e2e38] rounded-2xl p-5 text-white shadow-md relative overflow-hidden">
     <div class="relative z-10">
-      <p class="text-[#3edfa4] text-[11px] font-bold tracking-widest mb-1.5 uppercase">Total Balance</p>
-      <h1 class="text-[38px] leading-none font-bold mb-2">$124,500.00</h1>
-      <p class="text-[#b7efd7] text-sm font-medium flex items-center gap-1.5">
+      <p class="text-[#3edfa4] text-[11px] font-bold tracking-widest mb-1 uppercase">Total Balance</p>
+      <div class="flex items-baseline gap-1">
+        <h1 class="text-4xl font-bold">$124,500.00</h1>
+      </div>
+      <p class="text-[#3edfa4] text-[13px] font-bold flex items-center gap-1.5 mt-2">
         <i data-lucide="trending-up" class="w-4 h-4"></i> +$3,240 this month
       </p>
     </div>
 
     <div class="flex gap-3 mt-6 relative z-10">
-      <button class="flex-1 bg-white text-[#006e49] py-3 rounded-[14px] text-[14px] font-bold shadow-sm flex items-center justify-center gap-2">
+      <button class="flex-1 bg-[#00895c] hover:bg-[#007a52] text-white py-2.5 rounded-xl text-sm font-bold shadow-sm flex items-center justify-center gap-2 transition-colors">
         <i data-lucide="arrow-down-to-line" class="w-4 h-4"></i> Deposit
       </button>
-      <button class="flex-1 bg-white/20 text-white py-3 rounded-[14px] text-[14px] font-bold shadow-sm flex items-center justify-center gap-2 backdrop-blur-md">
+      <button class="flex-1 bg-slate-700/50 hover:bg-slate-700 text-white py-2.5 rounded-xl text-sm font-bold shadow-sm flex items-center justify-center gap-2 transition-colors">
         <i data-lucide="arrow-up-right" class="w-4 h-4"></i> Send
       </button>
     </div>
   </div>
 
   <!-- Quick Actions -->
-  <div class="grid grid-cols-4 gap-3">
-    <div class="flex flex-col items-center gap-1.5 cursor-pointer hover:opacity-80 transition-opacity">
-      <div class="w-[60px] h-[60px] bg-white rounded-[18px] flex items-center justify-center shadow-sm border border-slate-100 text-[#006e49]">
-        <i data-lucide="credit-card" class="w-7 h-7"></i>
+  <div class="flex gap-2 overflow-x-auto pb-1 pt-2 scrollbar-hide justify-between">
+    <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+      <div class="w-12 h-12 bg-[#e0faee] rounded-[18px] flex items-center justify-center shadow-sm">
+        <i data-lucide="credit-card" class="w-6 h-6 text-[#006e49]"></i>
       </div>
       <span class="text-[12px] font-semibold text-slate-700">Cards</span>
     </div>
-    <div class="flex flex-col items-center gap-1.5 cursor-pointer hover:opacity-80 transition-opacity">
-      <div class="w-[60px] h-[60px] bg-white rounded-[18px] flex items-center justify-center shadow-sm border border-slate-100 text-[#006e49]">
-        <i data-lucide="repeat" class="w-7 h-7"></i>
+    <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+      <div class="w-12 h-12 bg-[#d1ddf8] rounded-[18px] flex items-center justify-center shadow-sm">
+        <i data-lucide="repeat" class="w-6 h-6 text-[#294c6f]"></i>
       </div>
       <span class="text-[12px] font-semibold text-slate-700">Transfer</span>
     </div>
-    <div class="flex flex-col items-center gap-1.5 cursor-pointer hover:opacity-80 transition-opacity">
-      <div class="w-[60px] h-[60px] bg-white rounded-[18px] flex items-center justify-center shadow-sm border border-slate-100 text-[#006e49]">
-        <i data-lucide="pie-chart" class="w-7 h-7"></i>
+    <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+      <div class="w-12 h-12 bg-[#fbdfb7] rounded-[18px] flex items-center justify-center shadow-sm">
+        <i data-lucide="pie-chart" class="w-6 h-6 text-[#613601]"></i>
       </div>
       <span class="text-[12px] font-semibold text-slate-700">Invest</span>
     </div>
-    <div class="flex flex-col items-center gap-1.5 cursor-pointer hover:opacity-80 transition-opacity">
-      <div class="w-[60px] h-[60px] bg-white rounded-[18px] flex items-center justify-center shadow-sm border border-slate-100 text-[#006e49]">
-        <i data-lucide="more-horizontal" class="w-7 h-7"></i>
+    <div class="flex flex-col items-center gap-1.5 cursor-pointer">
+      <div class="w-12 h-12 bg-[#f0f4fb] rounded-[18px] flex items-center justify-center shadow-sm border border-slate-100">
+        <i data-lucide="more-horizontal" class="w-6 h-6 text-slate-600"></i>
       </div>
       <span class="text-[12px] font-semibold text-slate-700">More</span>
     </div>
   </div>
 
-  <!-- Recent Activity Teaser -->
-  <div class="bg-white rounded-[24px] p-5 shadow-sm border border-slate-100">
-    <div class="flex justify-between items-center mb-5">
+  <!-- Recent Activity Teaser (Adapted to match Goals Cards) -->
+  <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
+    <div class="flex justify-between items-center mb-4">
       <h3 class="font-bold text-[19px] text-slate-800">Recent Transactions</h3>
-      <button class="text-[#006e49] text-[13px] font-bold" onclick="loadPage('activity', 'Activity', document.querySelectorAll('.nav-item')[3])">See All</button>
+      <button class="text-[#006e49] font-bold text-[13px] flex items-center" onclick="loadPage('activity', 'Activity', document.querySelectorAll('.nav-item')[3])">
+        See All <i data-lucide="chevron-right" class="w-4 h-4"></i>
+      </button>
     </div>
     <div class="space-y-4">
-      <div class="flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 bg-[#f0f4fb] rounded-full flex items-center justify-center">
-            <i data-lucide="coffee" class="w-[22px] h-[22px] text-[#4a5a7b]"></i>
+      <div class="flex justify-between items-start">
+        <div class="flex gap-3">
+          <div class="w-12 h-12 bg-[#f0f4fb] rounded-[18px] flex items-center justify-center mt-1">
+            <i data-lucide="coffee" class="w-6 h-6 text-[#294c6f]"></i>
           </div>
           <div>
-            <p class="font-bold text-[15px] text-slate-800">Starbucks</p>
-            <p class="text-[13px] text-slate-500 mt-0.5">Today, 8:42 AM</p>
+            <h4 class="font-bold text-[16px] text-slate-800">Starbucks</h4>
+            <p class="text-slate-500 text-[13px] mt-0.5">Today, 8:42 AM</p>
           </div>
         </div>
-        <span class="font-bold text-[16px] text-slate-800">-$4.50</span>
+        <span class="font-bold text-[16px] text-slate-800 mt-1">-$4.50</span>
       </div>
 
-      <div class="h-[1px] w-full bg-slate-100"></div>
+      <div class="ml-[60px] h-[1px] w-[calc(100%-60px)] bg-slate-100"></div>
 
-      <div class="flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 bg-[#e0faee] rounded-full flex items-center justify-center">
-            <i data-lucide="arrow-down-left" class="w-[22px] h-[22px] text-[#006e49]"></i>
+      <div class="flex justify-between items-start">
+        <div class="flex gap-3">
+          <div class="w-12 h-12 bg-[#e0faee] rounded-[18px] flex items-center justify-center mt-1">
+            <i data-lucide="arrow-down-left" class="w-6 h-6 text-[#006e49]"></i>
           </div>
           <div>
-            <p class="font-bold text-[15px] text-slate-800">Salary Deposit</p>
-            <p class="text-[13px] text-slate-500 mt-0.5">Yesterday</p>
+            <h4 class="font-bold text-[16px] text-slate-800">Salary Deposit</h4>
+            <p class="text-slate-500 text-[13px] mt-0.5">Yesterday</p>
           </div>
         </div>
-        <span class="font-bold text-[16px] text-[#00895c]">+$3,200.00</span>
+        <span class="font-bold text-[16px] text-[#00895c] mt-1">+$3,200.00</span>
       </div>
 
-      <div class="h-[1px] w-full bg-slate-100"></div>
+      <div class="ml-[60px] h-[1px] w-[calc(100%-60px)] bg-slate-100"></div>
 
-      <div class="flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 bg-[#fbe7e6] rounded-full flex items-center justify-center">
-            <i data-lucide="shopping-bag" class="w-[22px] h-[22px] text-[#c93b32]"></i>
+      <div class="flex justify-between items-start">
+        <div class="flex gap-3">
+          <div class="w-12 h-12 bg-[#fbe7e6] rounded-[18px] flex items-center justify-center mt-1">
+            <i data-lucide="shopping-bag" class="w-6 h-6 text-[#c93b32]"></i>
           </div>
           <div>
-            <p class="font-bold text-[15px] text-slate-800">Whole Foods Market</p>
-            <p class="text-[13px] text-slate-500 mt-0.5">Yesterday</p>
+            <h4 class="font-bold text-[16px] text-slate-800">Whole Foods</h4>
+            <p class="text-slate-500 text-[13px] mt-0.5">Yesterday</p>
           </div>
         </div>
-        <span class="font-bold text-[16px] text-slate-800">-$84.20</span>
+        <span class="font-bold text-[16px] text-slate-800 mt-1">-$84.20</span>
       </div>
     </div>
   </div>
