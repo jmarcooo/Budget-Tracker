@@ -27,8 +27,8 @@
         </div>
         <div id="header-title" class="font-semibold text-[17px] text-slate-800 absolute left-1/2 -translate-x-1/2">Dashboard</div>
         <div class="flex -space-x-3">
-          <img src="https://i.pravatar.cc/100?img=47" alt="Patricia" class="w-9 h-9 rounded-full border-2 border-white relative z-10" />
-          <img src="https://i.pravatar.cc/100?img=11" alt="Jon" class="w-9 h-9 rounded-full border-2 border-white relative z-0" />
+          <img src="https://i.pravatar.cc/100?img=47" alt="Chai" class="w-9 h-9 rounded-full border-2 border-white relative z-10" />
+          <img src="https://i.pravatar.cc/100?img=11" alt="Marco" class="w-9 h-9 rounded-full border-2 border-white relative z-0" />
         </div>
       </header>
 
@@ -83,7 +83,7 @@
         <div class="px-6 pt-4 pb-8 space-y-6 overflow-y-auto">
           <div class="space-y-4">
             <!-- Account 1 -->
-            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
+            <div id="account-item-joint" class="account-item bg-white rounded-2xl p-4 shadow-sm border-2 border-[#006e49] cursor-pointer" onclick="selectAccount('joint', 'BDO Joint Account', '₱124,500.00', 'Total Joint Balance')">
               <div class="flex justify-between items-center mb-2">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 bg-[#e0faee] rounded-[14px] flex items-center justify-center">
@@ -101,14 +101,14 @@
             </div>
 
             <!-- Account 2 -->
-            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
+            <div id="account-item-marco" class="account-item bg-white rounded-2xl p-4 shadow-sm border-2 border-transparent hover:border-slate-200 cursor-pointer" onclick="selectAccount('marco', 'Gcash (Marco)', '₱12,450.00', 'Marco\'s Balance')">
               <div class="flex justify-between items-center mb-2">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 bg-[#d1ddf8] rounded-[14px] flex items-center justify-center">
-                    <img src="https://i.pravatar.cc/100?img=11" alt="Jon" class="w-10 h-10 rounded-[14px] object-cover" />
+                    <img src="https://i.pravatar.cc/100?img=11" alt="Marco" class="w-10 h-10 rounded-[14px] object-cover" />
                   </div>
                   <div>
-                    <h4 class="font-bold text-[15px] text-slate-800">Gcash (Jon)</h4>
+                    <h4 class="font-bold text-[15px] text-slate-800">Gcash (Marco)</h4>
                     <p class="text-[12px] text-slate-500">Personal Wallet</p>
                   </div>
                 </div>
@@ -119,14 +119,14 @@
             </div>
 
             <!-- Account 3 -->
-            <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-100">
+            <div id="account-item-chai" class="account-item bg-white rounded-2xl p-4 shadow-sm border-2 border-transparent hover:border-slate-200 cursor-pointer" onclick="selectAccount('chai', 'BPI (Chai)', '₱66,850.00', 'Chai\'s Balance')">
               <div class="flex justify-between items-center mb-2">
                 <div class="flex items-center gap-3">
                   <div class="w-10 h-10 bg-[#fbe7e6] rounded-[14px] flex items-center justify-center">
-                    <img src="https://i.pravatar.cc/100?img=47" alt="Patricia" class="w-10 h-10 rounded-[14px] object-cover" />
+                    <img src="https://i.pravatar.cc/100?img=47" alt="Chai" class="w-10 h-10 rounded-[14px] object-cover" />
                   </div>
                   <div>
-                    <h4 class="font-bold text-[15px] text-slate-800">BPI (Patricia)</h4>
+                    <h4 class="font-bold text-[15px] text-slate-800">BPI (Chai)</h4>
                     <p class="text-[12px] text-slate-500">Personal Savings</p>
                   </div>
                 </div>
@@ -186,8 +186,8 @@
                 <div class="relative">
                   <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
                     <option value="joint">Joint</option>
-                    <option value="jon">Jon</option>
-                    <option value="patricia">Patricia</option>
+                    <option value="marco">Marco</option>
+                    <option value="chai">Chai</option>
                   </select>
                   <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
                 </div>
@@ -248,8 +248,8 @@
               <div class="relative">
                 <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
                   <option value="joint">Joint Account</option>
-                  <option value="jon">Jon's Wallet</option>
-                  <option value="patricia">Patricia's Wallet</option>
+                  <option value="marco">Marco's Wallet</option>
+                  <option value="chai">Chai's Wallet</option>
                 </select>
                 <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
               </div>
@@ -261,8 +261,8 @@
               <div class="relative">
                 <select class="w-full bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 text-[12px] appearance-none font-semibold text-slate-700 outline-none focus:border-[#006e49] focus:ring-1 focus:ring-[#006e49] truncate pr-8">
                   <option value="both">Both (Shared)</option>
-                  <option value="jon">Jon</option>
-                  <option value="patricia">Patricia</option>
+                  <option value="marco">Marco</option>
+                  <option value="chai">Chai</option>
                 </select>
                 <i data-lucide="chevron-down" class="w-4 h-4 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none"></i>
               </div>
@@ -337,6 +337,39 @@
 
     <script>
         // Modal logic
+
+        function selectAccount(accountId, name, balance, label) {
+            // Remove active styles from all
+            document.querySelectorAll('.account-item').forEach(item => {
+                item.classList.remove('border-[#006e49]');
+                item.classList.add('border-transparent');
+                item.classList.remove('bg-slate-50');
+            });
+
+            // Add active styles to selected
+            const selectedItem = document.getElementById('account-item-' + accountId);
+            if (selectedItem) {
+                selectedItem.classList.remove('border-transparent');
+                selectedItem.classList.add('border-[#006e49]');
+                selectedItem.classList.add('bg-slate-50');
+            }
+
+            // Update dashboard if it's currently loaded
+            const dashboardTitle = document.getElementById('dashboard-account-title');
+            const dashboardBalance = document.getElementById('dashboard-account-balance');
+
+            if (dashboardTitle && dashboardBalance) {
+                dashboardTitle.textContent = label;
+                dashboardBalance.textContent = balance;
+            }
+
+            // Optional: Store in global variable or localStorage so it persists across page loads
+            window.currentSelectedAccount = { accountId, name, balance, label };
+
+            // Close drawer after selection
+            toggleSavingsDrawer();
+        }
+
         function toggleSavingsDrawer() {
             const drawer = document.getElementById('savings-drawer');
             const backdrop = document.getElementById('savings-drawer-backdrop');
@@ -440,8 +473,16 @@
         // Initialize lucide icons for the static parts
         lucide.createIcons();
 
-        // Initialize default track state
+                // Initialize default track state
         setTrackType('expense');
+
+        // Initialize default selected account
+        window.currentSelectedAccount = {
+            accountId: 'joint',
+            name: 'BDO Joint Account',
+            balance: '₱124,500.00',
+            label: 'Total Joint Balance'
+        };
 
 
         // Page loader function
@@ -489,8 +530,18 @@
                     }
                 }
 
-                // Re-initialize icons for loaded content
+                                // Re-initialize icons for loaded content
                 lucide.createIcons();
+
+                // If dashboard is loaded, apply the currently selected account
+                if (pageName === 'dashboard' && window.currentSelectedAccount) {
+                    const dashboardTitle = document.getElementById('dashboard-account-title');
+                    const dashboardBalance = document.getElementById('dashboard-account-balance');
+                    if (dashboardTitle && dashboardBalance) {
+                        dashboardTitle.textContent = window.currentSelectedAccount.label;
+                        dashboardBalance.textContent = window.currentSelectedAccount.balance;
+                    }
+                }
             } catch (error) {
                 console.error('Error loading page:', error);
                 document.getElementById('app-content').innerHTML = `
